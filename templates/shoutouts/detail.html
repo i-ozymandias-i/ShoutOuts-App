@@ -1,0 +1,11 @@
+{% extends "shoutouts/base.html" %}
+
+{% block title %}{{ block.super }} from {{ shoutout.submitter.username }} {% endblock title %}
+
+{% block content %}
+<h1>{{ shoutout.submitter.username }} said...</h1>
+
+<p>{{ shoutout.body }}</p>
+<p>on {{ shoutout.created|date }}</p>
+
+{% endblock content %}
